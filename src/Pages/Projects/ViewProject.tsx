@@ -33,7 +33,7 @@ export default function ViewProject () {
                         }}
                     >
                         {slides.map((s) => {
-                        return <img src={s} className="max-h-full max-w-full h-full relative top-[50%] " />;
+                        return <> <img src={s} className=" carousel-image block max-h-full max-w-full h-full relative mx-auto top-[50%] " /></>;
                         })}
                     </div>
                     <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">

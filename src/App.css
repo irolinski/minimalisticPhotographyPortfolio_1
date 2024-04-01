@@ -1,0 +1,9 @@
+
+.carousel-image{
+    margin: auto;
+    padding: auto;
+    position: absolute;
+    min-width: 100%;
+    top: 50%;
+    transform: translateY(-50%), translateX(-50%);
+}
