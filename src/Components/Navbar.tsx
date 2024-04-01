@@ -12,11 +12,10 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   return (
-  < div className='py-2'>
-      <Disclosure as="nav" className="bg-transparent">
+      <Disclosure as="nav" className="bg-transparent py-2">
         {({ open }) => (
           <>
-            <div className=" px-8 py-2 lg:mx-4 lg:py-4">
+            <div className=" pl-4 pr-1 pb-2 sm:px-8 sm:pt-2 lg:mx-4 lg:pt-4 lg:pb-8">
               <div className="relative flex h-16 items-center ">
                 {/* Desktop nav */}
                 <div>
@@ -71,7 +70,7 @@ export default function Navbar() {
                     href={item.href}
                     className={classNames(
                       item.current ? 'underline' : 'hover:text-gray',
-                      'block rounded-md px-3 py-5 text-2xl font-header text-center underline-offset-8 '
+                      'block rounded-md px-3 py-5 text-2xl font-header text-center underline-offset-8 hover:cursor-crosshair '
                     )}
                     aria-current={item.current ? 'page' : undefined}
                   >
@@ -83,6 +82,5 @@ export default function Navbar() {
           </>
         )}
       </Disclosure>
-  </ div>
   )
 }

@@ -18,7 +18,7 @@ module.exports = {
         current: 'currentColor',
         'black': '#0f172a',
         'gray': '#727579',
-      },
+      }
     },
     plugins: [],
   }
