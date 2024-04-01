@@ -1,9 +1,9 @@
 import { Disclosure } from '@headlessui/react'
 
 const navigation = [
-  { name: 'Start', href: '#', current: true },
-  { name: 'Projekty', href: '#', current: false },
-  { name: 'O mnie', href: '#', current: false },
+  { name: 'Start', href: '/', current: true },
+  { name: 'Projekty', href: '/#/projekty', current: false },
+  { name: 'O mnie', href: '/#/o-mnie', current: false },
 ]
 
 function classNames(...classes: string[]) {
