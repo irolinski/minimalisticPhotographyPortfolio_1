@@ -1,5 +1,4 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 
 const navigation = [
   { name: 'Start', href: '#', current: true },
@@ -17,11 +16,11 @@ export default function Navbar() {
       <Disclosure as="nav" className="bg-transparent">
         {({ open }) => (
           <>
-            <div className="px-2 px-6 lg:mx-4 lg:py-4">
+            <div className=" px-8 py-2 lg:mx-4 lg:py-4">
               <div className="relative flex h-16 items-center ">
-                      {/* Desktop nav */}
+                {/* Desktop nav */}
                 <div>
-                  <span className="font-header hover:text-gray-600/75 text-xl lg:text-3xl hover:cursor-none">Pola Brogosiewicz</span>
+                  <span className="font-header hover:text-gray-600/75 text-2xl lg:text-3xl hover:cursor-none">Pola Brogosiewicz</span>
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end ">
                   <div className="hidden sm:ml-6 sm:block">
@@ -44,13 +43,18 @@ export default function Navbar() {
                 </div>
                 <div className=" inset-y-0 left-0 flex items-center sm:hidden justify-end ">
                   {/* mobile menu buttons*/}
-                  <Disclosure.Button className="relative inline-flex items-center justify-end rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white bottom-50 left-50 hover:cursor-crosshair">
+                  <Disclosure.Button 
+                  className="relative inline-flex items-center justify-end
+                  rounded-md p-2 text-gray-400 hover:text-white focus:outline-none
+                  focus:ring-2 focus:ring-inset focus:ring-white bottom-50 left-50
+                  hover:cursor-crosshair"
+                  >
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                        <img src='/icons/crocodile.svg' className="block h-10 w-10" aria-hidden="true" />
+                        <img src='/icons/close_menu.svg' className="block h-10 w-10" aria-hidden="true" />
                     ) : (
-                      <img src='/icons/menu_icon.svg' className="block h-10 w-10" aria-hidden="true" />
+                      <img src='/icons/open_menu.svg' className="block h-10 w-10" aria-hidden="true" />
 
                     )}
                   </Disclosure.Button>
@@ -76,7 +80,6 @@ export default function Navbar() {
                 ))}
               </div>
             </Disclosure.Panel>
-            
           </>
         )}
       </Disclosure>
