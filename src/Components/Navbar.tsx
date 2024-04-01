@@ -12,7 +12,7 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   return (
-      <Disclosure as="nav" className="bg-transparent py-2">
+      <Disclosure as="nav" className="bg-white py-2">
         {({ open }) => (
           <>
             <div className=" pl-4 pr-1 pb-2 sm:px-8 sm:pt-2 lg:mx-4 lg:pt-4 lg:pb-8">
@@ -44,16 +44,16 @@ export default function Navbar() {
                   {/* mobile menu buttons*/}
                   <Disclosure.Button 
                   className="relative inline-flex items-center justify-end
-                  rounded-md p-2 text-gray-400 hover:text-white focus:outline-none
-                  focus:ring-2 focus:ring-inset focus:ring-white bottom-50 left-50
+                  rounded-md p-2 text-gray-400 focus:outline-none
+                  focus:ring-2 focus:ring-inset focus:ring-white
                   hover:cursor-crosshair"
                   >
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                        <img src='/icons/close_menu.svg' className="block h-10 w-10" aria-hidden="true" />
+                        <img src='/icons/close_menu.svg' className="block h-10 w-10 z-10" aria-hidden="true" />
                     ) : (
-                      <img src='/icons/open_menu.svg' className="block h-10 w-10" aria-hidden="true" />
+                      <img src='/icons/open_menu.svg' className="block h-10 w-10 z-10" aria-hidden="true" />
 
                     )}
                   </Disclosure.Button>
@@ -61,8 +61,8 @@ export default function Navbar() {
               </div>
             </div>
             {/* mobile nav */}
-            <Disclosure.Panel className="sm:hidden">
-              <div className="absolute space-y-1 px-2 pb-3 pt-10 mt-12 top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3">
+            <Disclosure.Panel style={{backgroundColor: '#FFFFFF'}} className="sm:hidden fixed inset-0">
+              <div className="absolute bg-white space-y-1 mt-12 top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 p-28">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
