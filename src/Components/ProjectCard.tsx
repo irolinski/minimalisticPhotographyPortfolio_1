@@ -4,7 +4,7 @@ type cardProps = {
     seriesUrl: string,
 }
 
-export default function ({imageUrl, seriesTitle, seriesUrl }:cardProps ) {
+export default function ProjectCard ({imageUrl, seriesTitle, seriesUrl }:cardProps ) {
     return(
         <div className="max-w-full mx-8 my-10 md:mx-4 ">
             <a href={seriesUrl}>
