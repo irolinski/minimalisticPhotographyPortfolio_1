@@ -1,4 +1,8 @@
 
+
+/* carousel detail styling */
+
+
 .carousel-image{
     margin: auto;
     padding: auto;
@@ -14,5 +18,29 @@
 }
 
 .vertical{
-    padding: 0 10em 0 10em;
+    padding: 0 10vw 0 10vw;
+}
+
+@media (min-width: 400px){
+    .vertical{
+        padding: 0 12vw 0 12vw;
+    }
+}
+
+@media (min-width: 650px){
+    .vertical{
+        padding: 0 18vw 0 18vw;
+    }
+}
+
+@media (min-width: 1000px){
+    .vertical{
+        padding: 0 15vw 0 15vw;
+    }
+}
+
+@media (min-width: 1200px){
+    .vertical{
+        padding: 0 12vw 0 12vw;
+    }
 }

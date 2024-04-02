@@ -51,9 +51,9 @@ export default function Navbar() {
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                        <img src='/icons/close_menu.svg' className="block h-10 w-10 z-10" aria-hidden="true" />
+                        <img src='/icons/close_menu.svg' className="block h-10 w-10 z-20" aria-hidden="true" />
                     ) : (
-                      <img src='/icons/open_menu.svg' className="block h-10 w-10 z-10" aria-hidden="true" />
+                      <img src='/icons/open_menu.svg' className="block h-10 w-10 z-20" aria-hidden="true" />
 
                     )}
                   </Disclosure.Button>
@@ -61,7 +61,7 @@ export default function Navbar() {
               </div>
             </div>
             {/* mobile nav */}
-            <Disclosure.Panel style={{backgroundColor: '#FFFFFF'}} className="sm:hidden fixed inset-0">
+            <Disclosure.Panel style={{backgroundColor: '#FFFFFF'}} className="sm:hidden fixed inset-0 z-10">
               <div className="absolute bg-white space-y-1 mt-12 top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 p-28">
                 {navigation.map((item) => (
                   <Disclosure.Button
