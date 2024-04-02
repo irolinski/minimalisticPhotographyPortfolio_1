@@ -32,9 +32,15 @@ export default function ViewProject () {
                         transform: `translateX(-${current * 100}%)`,
                         }}
                     >
-                        {slides.map((s) => {
-                        return <> <img src={s} className=" carousel-image block max-h-full max-w-full h-full relative mx-auto top-[50%] " /></>;
-                        })}
+                        {/* {slides.map((s) => {
+                        return <> <img src={s} className=" carousel-image block max-h-full max-w-full h-full relative mx-auto top-[50%]" /> </>;
+                        })} */}
+                        
+                        <img className="carousel-image" src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg" />
+                        <img className="carousel-image" src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880697/ola/pwx04uxflrcxmzwruxnr.jpg" />
+                        <img className="carousel-image" src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg" />
+                        <img className="vertical carousel-image" src="https://64.media.tumblr.com/139152f8a52760bbc53b9be439194eb4/tumblr_pw4pecjMWA1sfa5q9o1_500.jpg" />
+                        <img className="carousel-image" src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880691/ola/uxzigcrb3dafjuhrsh98.jpg" />
                     </div>
                     <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
                         {slides.map((s, i) => {
