@@ -18,7 +18,16 @@ export default function ViewProject () {
 
 
     return(
-        <div className="flex my-[25%] sm:my-[10%] lg:my-[5%]" >
+      <>
+
+          <div className="flex justify-center">
+            <h1 className="font-header text-center text-xl xs:text-2xl sm:text-3xl my-[15%] md:my-[5%] lg:mt-[2%] lg:mb-[0]">
+              Osaczanie pary w trawie (1996)
+            </h1>
+          
+
+          </div>  
+        <div className="flex mb-[25%] sm:mb-[10%] lg:my-[5%]" >
             <div className='carousel-wrapper px-2 mx-auto flex'>      
                 <button onClick={previousSlide}> &lt; </button>
                 <div className="overflow-hidden relative max-w-full md:max-w-screen-md mx-8">
@@ -33,6 +42,8 @@ export default function ViewProject () {
                 <button onClick={nextSlide}>&gt;</button>
             </div>
         </div>
+
+        </>
     )
 }
 
