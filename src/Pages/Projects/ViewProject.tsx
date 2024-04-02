@@ -27,13 +27,13 @@ export default function ViewProject () {
                 <div className="overflow-hidden relative max-w-full md:max-w-screen-md mx-8">
 
                     <div
-                        className={`flex transition ease-out duration-40`}
+                        className={`flex transition ease-out duration-40 max-h-[750px]`}
                         style={{
                         transform: `translateX(-${current * 100}%)`,
                         }}
                     >
                         {slides.map((s) => {
-                        return <> <img src={s} className=" carousel-image block max-h-full max-w-full h-full relative mx-auto top-[50%] " /></>;
+                        return <img src={s} className={"carousel-image block relative mx-auto top-[50%]"} />;
                         })}
                     </div>
                     <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">

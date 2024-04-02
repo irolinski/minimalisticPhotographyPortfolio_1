@@ -1,0 +1,4 @@
+    vertical img
+    
+    padding: 11em;
+    margin-top: -7em;
