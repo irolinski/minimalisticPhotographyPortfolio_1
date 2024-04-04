@@ -1,11 +1,8 @@
 import { useState } from "react";
+import Pic from "./Pic";
 
-const slides = ['https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg', 'https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880697/ola/pwx04uxflrcxmzwruxnr.jpg', 'https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg', 'https://64.media.tumblr.com/139152f8a52760bbc53b9be439194eb4/tumblr_pw4pecjMWA1sfa5q9o1_500.jpg', 'https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880691/ola/uxzigcrb3dafjuhrsh98.jpg']
+const slides = ["https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg", "https://64.media.tumblr.com/139152f8a52760bbc53b9be439194eb4/tumblr_pw4pecjMWA1sfa5q9o1_500.jpg", "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg", "https://images.unsplash.com/photo-1542061433-6b0de4289291?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880691/ola/uxzigcrb3dafjuhrsh98.jpg"] 
 
-  const zbiorPrac = [
-    {"src": "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg", "vertical": 0},
-    {"src": "https://64.media.tumblr.com/139152f8a52760bbc53b9be439194eb4/tumblr_pw4pecjMWA1sfa5q9o1_500.jpg", "vertical": 1},
-  ]
 
 
 export default function ViewProject () {
@@ -37,18 +34,17 @@ export default function ViewProject () {
             <div className='carousel-wrapper px-2 mx-auto flex'>      
                 <button onClick={previousSlide}> &lt; </button>
                 <div className="overflow-hidden relative max-w-full md:max-w-screen-md mx-8">
-                    <div className={`flex transition ease-out duration-40`} style={{ transform: `translateX(-${current * 100}%)`}}>                       
-                        <img className="carousel-image" src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg" />
-                        <img className="carousel-image" src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880697/ola/pwx04uxflrcxmzwruxnr.jpg" />
-                        <img className="carousel-image" src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg" />
-                        <img className="vertical carousel-image" src="https://64.media.tumblr.com/139152f8a52760bbc53b9be439194eb4/tumblr_pw4pecjMWA1sfa5q9o1_500.jpg" />
-                        <img className="carousel-image" src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880691/ola/uxzigcrb3dafjuhrsh98.jpg" />
+                    <div className={`flex transition ease-out duration-40`} style={{ transform: `translateX(-${current * 100}%)`}}> 
+                        {slides.map(a => {
+                          return(
+                             <Pic src={a} />    
+                          )
+                        })}
                     </div>
                 </div>
                 <button onClick={nextSlide}>&gt;</button>
             </div>
         </div>
-
         </>
     )
 }
