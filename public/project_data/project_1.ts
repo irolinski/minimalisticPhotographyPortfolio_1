@@ -9,7 +9,7 @@ const slides =
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880691/ola/uxzigcrb3dafjuhrsh98.jpg"
 ]; 
 
-const url = '/#/projekty/1';
+const url = '/#/projekty/' + `${name.split(' ')[0]}`;
 
 const imgUrl = "https://64.media.tumblr.com/139152f8a52760bbc53b9be439194eb4/tumblr_pw4pecjMWA1sfa5q9o1_500.jpg"
 

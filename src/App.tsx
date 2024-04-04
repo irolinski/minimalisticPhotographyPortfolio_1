@@ -2,10 +2,13 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
+import StartPage from './Pages/Projects/StartPage.tsx'
 import AllProjects from './Pages/Projects/AllProjects'
 import ProjectPage from './Pages/Projects/ProjectPage.tsx'
 
-import {project_1} from '../public/project_data/project_1.ts'
+import { projectData } from '../public/project_data/projectData_all.ts'
+import AboutPage from './Pages/Projects/AboutPage.tsx'
+
 
 export default function App() {
 
@@ -13,8 +16,14 @@ export default function App() {
     <div className="min-h-full">
       <Navbar />
         <Routes>
+          <Route path='/' element={<StartPage />} />
           <Route path='/projekty' element={<AllProjects />} />
-            <Route path='/projekty/1' element={<ProjectPage name={project_1.name} slides={project_1.slides} />} />
+            {projectData.map(p => {
+              return(
+                <Route path={p.url.substring(2)} element={<ProjectPage name={p.name} slides={p.slides} />} />
+              )
+            })}
+          <Route path='/o-mnie' element={<AboutPage />} />
         </Routes>
       <Footer />
     </div>
