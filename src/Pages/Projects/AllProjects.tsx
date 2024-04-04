@@ -5,7 +5,7 @@ import { projectData } from '../../../public/project_data/projectData_all.ts'
 
 export default function AllProjects () {
     return(
-        <div className="flex flex-wrap mx-auto justify-around pt-4">
+        <div className="flex flex-wrap mx-auto justify-around md:p-16 pt-4">
           {projectData.map(p => {
             return(
               <SeriesCard
