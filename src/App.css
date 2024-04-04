@@ -5,7 +5,6 @@
 
 .carousel-image{
     margin: auto;
-    padding: 2vw;
     display: block;
     position: relative;
     min-width: 100%;
@@ -34,6 +33,7 @@
 }
 
 @media (min-width: 1000px){
+
     .vertical{
         padding: 0 15vw 0 15vw;
     }

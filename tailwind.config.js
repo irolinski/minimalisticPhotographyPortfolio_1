@@ -24,7 +24,8 @@ module.exports = {
         'gray': '#727579',
       },
       screens: {
-        'xs': '375px',
+        'xxs': '375px',
+        'xs': '425px',
         ...defaultTheme.screens,
       },
     },
