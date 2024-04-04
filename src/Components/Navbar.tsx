@@ -1,21 +1,40 @@
 import { Disclosure } from '@headlessui/react'
+import { useEffect, useState } from 'react';
 
-const navigation = [
-  { name: 'Start', href: '/', current: true },
-  { name: 'Projekty', href: '/#/projekty', current: false },
-  { name: 'O mnie', href: '/#/o-mnie', current: false },
-]
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+type navbarProps = {
+  location: string;
+}
+
+export default function Navbar({location}: navbarProps) {
+
+  const [startState, setStartState] = useState(false);
+  const [projectsState, setProjectsState] = useState(false);
+  const [aboutState, setAboutState] = useState(false); 
+
+
+  useEffect(() => {
+    location.includes('start') ? setStartState(true) : setStartState(false);
+    location.includes('projekty') ? setProjectsState(true) : setProjectsState(false);
+    location.includes('o-mnie') ? setAboutState(true) : setAboutState(false); 
+  })
+
+
+  const navigation = [
+    { name: 'Start', href: '/#/start', current: startState },
+    { name: 'Projekty', href: '/#/projekty', current: projectsState },
+    { name: 'O mnie', href: '/#/o-mnie', current: aboutState },
+  ]
+
   return (
       <Disclosure as="nav" className="bg-white py-2">
         {({ open }) => (
           <>
-            <div className=" pl-4 pr-1 pb-2 sm:px-8 sm:pt-2 lg:mx-4 lg:pt-4 lg:pb-8">
+            <div className=" pl-4 pr-1 pb-2 sm:px-8 sm:pt-2 lg:mx-4 lg:pt-4 lg:pb-8" >
               <div className="relative flex h-16 items-center ">
                 {/* Desktop nav */}
                 <div>
@@ -54,7 +73,6 @@ export default function Navbar() {
                         <img src='/icons/close_menu.svg' className="block h-10 w-10 z-20" aria-hidden="true" />
                     ) : (
                       <img src='/icons/open_menu.svg' className="block h-10 w-10 z-20" aria-hidden="true" />
-
                     )}
                   </Disclosure.Button>
                 </div>
