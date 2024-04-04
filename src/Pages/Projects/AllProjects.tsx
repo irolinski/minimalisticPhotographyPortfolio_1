@@ -1,4 +1,4 @@
-import SeriesCard from "../../Components/ProjectCard";
+import SeriesCard from "../../Components/Projects/ProjectCard";
 
 
 export default function AllProjects () {

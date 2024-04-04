@@ -2,6 +2,12 @@ import { useState } from "react";
 
 const slides = ['https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg', 'https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880697/ola/pwx04uxflrcxmzwruxnr.jpg', 'https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg', 'https://64.media.tumblr.com/139152f8a52760bbc53b9be439194eb4/tumblr_pw4pecjMWA1sfa5q9o1_500.jpg', 'https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880691/ola/uxzigcrb3dafjuhrsh98.jpg']
 
+  const zbiorPrac = [
+    {"src": "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1711880700/ola/c68wyxdjtpiulaqaccma.jpg", "vertical": 0},
+    {"src": "https://64.media.tumblr.com/139152f8a52760bbc53b9be439194eb4/tumblr_pw4pecjMWA1sfa5q9o1_500.jpg", "vertical": 1},
+  ]
+
+
 export default function ViewProject () {
 
     let [current, setCurrent] = useState(0);
