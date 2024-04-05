@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Pic from "./Pic";
 
-
-
 type carouselTypes ={
   slides: string[];
 }
@@ -44,10 +42,10 @@ export default function Carousel ({slides}: carouselTypes) {
 
     return(
       <>
-        <div className="flex mb-[25%] sm:mb-[10%] lg:my-[5%]" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} >
-            <div className='carousel-wrapper px-2 mx-auto flex'>      
-                <button onClick={previousSlide}> &lt; </button>
-                <div className="overflow-hidden relative max-w-full md:max-w-screen-md mx-8">
+        <div className="flex sm:mb-[10%] lg:my-[5%]" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} >
+            <div className='carousel-wrapper px-2 mx-2 md:mx-auto flex'>      
+                <button className="hidden sm:block sm:scale-[2] lg:text-xl mx-2 md:mx-8"  onClick={previousSlide}> &lt; </button>
+                <div className="overflow-hidden relative max-w-full md:max-w-screen-md mx-2 xxs:mx-4 sm:mx-8">
                     <div className={`flex transition ease-out duration-40`} style={{ transform: `translateX(-${current * 100}%)`}}> 
                         {slides.map(a => {
                           return(
@@ -56,13 +54,14 @@ export default function Carousel ({slides}: carouselTypes) {
                         })}
                     </div>
                 </div>
-                <button onClick={nextSlide}>&gt;</button>
+                <button className="hidden sm:block sm:scale-[2] lg:text-xl mx-2 md:mx-8" onClick={nextSlide}> &gt;  </button>
             </div>
         </div>
+        <div className="flex mx-auto justify-center mt-8 mb-[25%] sm:hidden">
+            <button className="px-12 text-2xl xs:text-3xl" onClick={previousSlide}> &lt; </button>
+            <button className="px-12 text-2xl xs:text-3xl" onClick={nextSlide}> &gt; </button>
+            </div>
         </>
     )
 }
-
-
-
 

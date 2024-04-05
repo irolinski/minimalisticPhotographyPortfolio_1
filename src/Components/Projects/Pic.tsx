@@ -4,7 +4,6 @@ type picProps = {
     src: string
 }
 
-
 export default function Pic({src}:picProps) {
 
     const [cl, setCl] = useState('carousel-image')

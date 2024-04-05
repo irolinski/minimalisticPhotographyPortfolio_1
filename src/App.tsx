@@ -5,10 +5,8 @@ import Navbar from './Components/Navbar'
 import StartPage from './Pages/Projects/StartPage.tsx'
 import AllProjects from './Pages/Projects/AllProjects'
 import ProjectPage from './Pages/Projects/ProjectPage.tsx'
-
 import { projectData } from '../public/project_data/projectData_all.ts'
 import AboutPage from './Pages/Projects/AboutPage.tsx'
-
 
 
 export default function App() {
