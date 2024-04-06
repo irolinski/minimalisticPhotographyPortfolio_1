@@ -1,4 +1,3 @@
-import { Disclosure } from "@headlessui/react";
 import { useEffect, useState } from "react";
 
 type footerProps = {
