@@ -1,7 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import { useEffect, useState } from 'react';
 
-
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
@@ -99,4 +98,8 @@ export default function Navbar({location}: navbarProps) {
         )}
       </Disclosure>
   )
+
+  module.exports = navigation;
+
 }
+
