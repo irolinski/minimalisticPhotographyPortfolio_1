@@ -26,7 +26,7 @@ export default function App() {
             })}
           <Route path='/o-mnie' element={<AboutPage />} />
         </Routes>
-      <Footer />
+      <Footer location={location.pathname} />
     </div>
   )
 }

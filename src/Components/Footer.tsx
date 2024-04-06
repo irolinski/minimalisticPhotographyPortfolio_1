@@ -1,9 +1,26 @@
 import { Disclosure } from "@headlessui/react";
+import { useEffect, useState } from "react";
 
-export default function Footer() {
+type footerProps = {
+    location: string;
+  }
+
+function classNames(...classes: string[]) {
+return classes.filter(Boolean).join(' ')
+}
+
+
+export default function Footer({ location }:footerProps) {
+
+    const [startState, setStartState] = useState(false);
+
+    useEffect(() => {
+        location.includes('start') ? setStartState(true) : setStartState(false);
+    })
+
     return (
-        <Disclosure as="footer" className="bg-transparent py-12 px-4 w-full bottom-0">
+        <footer className={classNames(startState ? 'xl:hidden' : '' ,"bg-transparent py-12 px-4 w-full bottom-0")}>
             <a href='https://www.instagram.com/' ><img src="icons/instagram.svg" className="block h-8 w-8 mx-auto" aria-hidden="true"/></a>
-        </Disclosure>
+        </footer>
     )
 }

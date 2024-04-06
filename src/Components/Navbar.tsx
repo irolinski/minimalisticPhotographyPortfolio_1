@@ -24,7 +24,7 @@ export default function Navbar({location}: navbarProps) {
   })
 
 
-  const navigation = [
+    const navigation = [
     { name: 'Start', href: '/#/start', current: startState },
     { name: 'Projekty', href: '/#/projekty', current: projectsState },
     { name: 'O mnie', href: '/#/o-mnie', current: aboutState },
@@ -34,8 +34,8 @@ export default function Navbar({location}: navbarProps) {
       <Disclosure as="nav" className="bg-white py-2">
         {({ open }) => (
           <>
-            <div className=" pl-4 pr-1 pb-2 sm:px-8 sm:pt-2 lg:mx-4 lg:pt-4 lg:pb-8" >
-              <div className="relative flex h-16 items-center ">
+            <div className={classNames(startState ? 'hidden' : '', 'pl-4 pr-1 pb-2 sm:px-8 sm:pt-2 lg:mx-4 lg:pt-4 lg:pb-8')} >
+              <div className="relative flex h-16 items-center">
                 {/* Desktop nav */}
                 <div>
                   <span className="font-header hover:text-gray-600/75 text-2xl lg:text-3xl hover:cursor-none">Pola Brogosiewicz</span>
@@ -51,7 +51,6 @@ export default function Navbar({location}: navbarProps) {
                             item.current ? 'underline underline-offset-8' : 'hover:text-gray font-light',
                             'px-3 py-2 my-2 text-md font-medium font-header hover:cursor-crosshair'
                           )}
-                          aria-current={item.current ? 'page' : undefined}
                         >
                           {item.name}
                         </a>
@@ -59,7 +58,7 @@ export default function Navbar({location}: navbarProps) {
                     </div>
                   </div>
                 </div>
-                <div className=" inset-y-0 left-0 flex items-center sm:hidden justify-end ">
+                <div className="inset-y-0 left-0 flex items-center sm:hidden justify-end ">
                   {/* mobile menu buttons*/}
                   <Disclosure.Button 
                   className="relative inline-flex items-center justify-end
@@ -90,7 +89,6 @@ export default function Navbar({location}: navbarProps) {
                       item.current ? 'underline' : 'hover:text-gray',
                       'block rounded-md px-3 py-5 text-2xl font-header text-center underline-offset-8 hover:cursor-crosshair '
                     )}
-                    aria-current={item.current ? 'page' : undefined}
                   >
                     {item.name}
                   </Disclosure.Button>

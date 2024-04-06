@@ -1,4 +1,30 @@
+/* start page */
 
+.start-image{
+    width: 70vw;
+    margin: auto;
+    padding: 5vw
+}
+
+.start-vertical{
+    padding: 5vw 10vw ; 
+}
+
+@media (min-width: 768px) {
+
+    .start-image{
+        padding: 2vw 5vw
+    }
+
+    .start-vertical{
+        padding: 5vw 8vw;
+    }
+
+    .start-variation_1{
+        padding: 5vw 12vw 5vw 9vw
+    }
+    
+}
 
 /* carousel detail styling */
 
