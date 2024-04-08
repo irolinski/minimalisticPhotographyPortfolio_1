@@ -71,16 +71,11 @@
     }
 }
 
-@media (min-width: 1100px){
+@media (min-width: 1024px){
     .about-text > p{
         border-top: none !important;
         border-left: solid 1px #727579 !important;
     }
-}
-
-
-@media (min-width: 1022px){
-
     .vertical{
         padding: 0 15vw 0 15vw;
     }
@@ -94,7 +89,7 @@
 
 @media (min-width: 1400px){
     .vertical{
-        padding: 0 9vw 0 9vw;
+        padding: 0 10vw 0 10vw;
     }
 }
 

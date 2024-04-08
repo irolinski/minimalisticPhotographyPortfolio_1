@@ -11,7 +11,7 @@ export default function StartPage () {
     function slide () {
         setSlideOpacity(0);
         setTimeout(() => { setImage(slides[imgNum]) }, 500)
-        setTimeout(() => { setSlideOpacity(1) }, 1000)
+        setTimeout(() => { setSlideOpacity(1) }, 600)
         
         imgNum < slides.length -1 ? setImgNum(imgNum + 1) : setImgNum(0)
     }
@@ -19,7 +19,7 @@ export default function StartPage () {
 
 
     return(
-        <div className="flex flex-wrap mx-auto justify-around sm:p-16 mx-4 mb-36 mt-24 sm:mt-0 sm:mb-8 md:mb-0 lg:mb-8 xl:pt-48" onLoad={ () => setTimeout(() => { slide()}, 6000) }>
+        <div className="flex flex-wrap mx-auto justify-around sm:p-16 mx-4 mb-36 mt-24 sm:mt-0 sm:mb-8 md:mb-0 lg:mb-8 lg:pt-[12.5vh] xl:flex-nowrap xl:py-[20vh]" onLoad={ () => setTimeout(() => { slide()}, 4000) }>
             <div className="start-menu xl:pr-16">
                 <div className="text-center">
                 <span className="font-header hover:text-gray-600/75 text-3xl xs:text-4xl hover:cursor-none">Ola Kasprzykiewicz</span>

@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes, Navigate, useLocation } from 'react-router-dom'
 import './App.css'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
@@ -17,6 +17,7 @@ export default function App() {
     <div className="min-h-full">
       <Navbar location={location.pathname} />
         <Routes>
+          <Route path='/' element={<Navigate replace to='/start' />} />
           <Route path='/start' element={<StartPage />} />
           <Route path='/projekty' element={<AllProjects />} />
             {projectData.map(p => {
