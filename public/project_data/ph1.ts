@@ -1,5 +1,5 @@
 
-export const name = "Photos I";
+export const name = "Daylight";
 
 export const slides = [
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437326/z-Ola%20K.-Portfolio/PHOTO%201/y5xvijbcdbhn3pwmjyrg.jpg",
@@ -8,6 +8,7 @@ export const slides = [
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437331/z-Ola%20K.-Portfolio/PHOTO%201/nvk1d6qujhfaqdvagmbp.jpg",
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437328/z-Ola%20K.-Portfolio/PHOTO%201/fimjhngvhmwfhwjpu8ii.jpg",
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437335/z-Ola%20K.-Portfolio/PHOTO%201/ldpsfmcecgc2vshncmyb.jpg",
+    "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437334/z-Ola%20K.-Portfolio/PHOTO%202/rotowuopslu0p7z9zpmw.jpg",
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437331/z-Ola%20K.-Portfolio/PHOTO%201/k5wlh7kxckifmef4ijzf.jpg",
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437330/z-Ola%20K.-Portfolio/PHOTO%201/a6ujd28xxrdif0kmz3mj.jpg",
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437335/z-Ola%20K.-Portfolio/PHOTO%201/uk6dgtsbhro11pvwmou5.jpg",

@@ -37,7 +37,7 @@ export default function Navbar({location}: navbarProps) {
               <div className="relative flex h-16 items-center">
                 {/* Desktop nav */}
                 <div>
-                  <span className="font-header hover:text-gray-600/75 text-2xl lg:text-3xl hover:cursor-none">Ola Kasprzykiewicz</span>
+                  <a href="/#/start"><span className="font-header hover:text-gray-600/75 text-2xl lg:text-3xl hover:cursor-none">Ola Kasprzykiewicz</span></a>
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end ">
                   <div className="hidden sm:ml-6 sm:block">

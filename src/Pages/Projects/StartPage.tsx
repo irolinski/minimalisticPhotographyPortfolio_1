@@ -27,7 +27,7 @@ export default function StartPage () {
                 <div className="flex flex-row px-8 pt-4 xs:pt-8 justify-center xl:flex-col xl:text-center xl:pt-36">
                     <a href='/#/projekty' className='hover:text-gray font-light px-3 py-2 my-2 text-md sm:text-lg lg:text-xl font-header hover:cursor-crosshair'>Projekty</a>
                     <a href='/#/o-mnie' className='hover:text-gray font-light px-3 py-2 my-2 text-md sm:text-lg lg:text-xl font-header hover:cursor-crosshair'>O mnie</a>
-                    <a href='https://www.instagram.com/nadoleola' className='hidden xl:block hover:text-gray font-light px-3 py-2 my-2 text-md sm:text-lg lg:text-xl font-header hover:cursor-crosshair'>Instagram</a>
+                    <a href='https://www.instagram.com/nadoleola' target="_blank" className='hidden xl:block hover:text-gray font-light px-3 py-2 my-2 text-md sm:text-lg lg:text-xl font-header hover:cursor-crosshair'>Instagram</a>
                 </div>
             </div>
             <div className="slideshow pt-16 px-8 sm:pt-16 md:pt-16  xl:pt-0">

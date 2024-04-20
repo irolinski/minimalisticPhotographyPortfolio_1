@@ -26,6 +26,7 @@ export default function App() {
               )
             })}
           <Route path='/o-mnie' element={<AboutPage />} />
+          <Route path='*' element={<Navigate replace to='/start' />} />
         </Routes>
       <Footer location={location.pathname} />
     </div>
