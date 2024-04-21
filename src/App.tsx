@@ -14,7 +14,7 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="min-h-full">
+    <div className="min-h-full max-w-[1920px] 2xl:min-h-fit 2xl:absolute 2xl:max-h-[1080px] 2xl:top-1/2 2xl:left-1/2 2xl:-translate-y-[50%] 2xl:-translate-x-[50%]">
       <Navbar location={location.pathname} />
         <Routes>
           <Route path='/' element={<Navigate replace to='/start' />} />

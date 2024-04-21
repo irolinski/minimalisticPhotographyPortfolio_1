@@ -19,7 +19,7 @@ export default function StartPage () {
 
 
     return(
-        <div className="flex flex-wrap mx-auto justify-around sm:p-16 mx-4 mb-36 mt-24 sm:mt-0 sm:mb-8 md:mb-0 lg:mb-8 lg:pt-[12.5vh] xl:flex-nowrap xl:py-[20vh]" onLoad={ () => setTimeout(() => { slide()}, 4000) }>
+        <div className="flex flex-wrap mx-auto justify-around sm:p-16 mx-4 mb-36 mt-24 sm:mt-0 sm:mb-8 md:mb-0 lg:mb-8 lg:pt-[12.5vh] xl:flex-nowrap xl:py-[20vh]" onLoad={ () => setTimeout(() => { slide()}, 7000) }>
             <div className="start-menu xl:pr-16">
                 <div className="text-center">
                 <span className="font-header hover:text-gray-600/75 text-3xl xs:text-4xl hover:cursor-none">Ola Kasprzykiewicz</span>
@@ -32,9 +32,17 @@ export default function StartPage () {
             </div>
             <div className="slideshow pt-16 px-8 sm:pt-16 md:pt-16  xl:pt-0">
 
-                <img className="w-[800px]"
-                style={{opacity: slideOpacity, transition: `opacity 0.7s`}}
-                src={image}></img>
+                {/* load all slideshow images */}
+                {slides.map((i) => {
+                    return (
+                    <img className="hidden" src={i} />
+                )
+                })} 
+                
+                {/* display only the one determined by slide function */}
+                <div style={{ opacity: slideOpacity, transition: `opacity 0.7s` }}>
+                <img className="w-[800px]" src={image} />     
+                </div>
             </div>
         </div>
     )
