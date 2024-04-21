@@ -27,6 +27,7 @@ module.exports = {
         'xxs': '375px',
         'xs': '425px',
         ...defaultTheme.screens,
+        '3xl': '2108px'
       },
     },
     plugins: [],
