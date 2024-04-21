@@ -1,5 +1,5 @@
 
-export const name = "Morocco";
+export const name = "Streets of Morocco";
 
 export const slides = [
     "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1712437326/z-Ola%20K.-Portfolio/MAROCO/z5lm7gdg3ubhyz39dbhp.jpg",
