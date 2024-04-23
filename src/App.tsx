@@ -1,5 +1,5 @@
 import { Route, Routes, Navigate, useLocation } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import StartPage from "./Pages/Projects/StartPage.tsx";
@@ -19,11 +19,12 @@ export default function App() {
         <Route path="/" element={<Navigate replace to="/start" />} />
         <Route path="/start" element={<StartPage />} />
         <Route path="/projekty" element={<AllProjects />} />
-        {projectData.map((p) => {
+        {projectData.map((p, i) => {
           return (
             <Route
               path={p.url.substring(2)}
               element={<ProjectPage name={p.name} slides={p.slides} />}
+              key={i}
             />
           );
         })}

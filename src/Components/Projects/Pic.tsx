@@ -1,21 +1,24 @@
-import { useState } from "react"
+import { useState } from "react";
 
 type picProps = {
-    src: string
-}
+  src: string;
+};
 
-export default function Pic({src}:picProps) {
+export default function Pic({ src }: picProps) {
+  const [cl, setCl] = useState("carousel-image");
 
-    const [cl, setCl] = useState('carousel-image')
+  const setVertical = () => {
+    setCl("carousel-image vertical");
+  };
 
-
-    const setVertical = () => {
-        setCl('carousel-image vertical')
-    }    
-
-    return(
-        <img className={cl} src={src}  onLoad={evt => {
-           evt.currentTarget.naturalWidth < evt.currentTarget.naturalHeight && setVertical()}} ></img>
-    )
-
+  return (
+    <img
+      className={cl}
+      src={src}
+      onLoad={(evt) => {
+        evt.currentTarget.naturalWidth < evt.currentTarget.naturalHeight &&
+          setVertical();
+      }}
+    ></img>
+  );
 }
