@@ -1,6 +1,6 @@
 
 <h1 align="center">
-reactPhotographyPortfolio_1
+minimalisticPhotographyPortfolio_1
 </h1>
 
 <h4 align="center">Photo portfolio react-based app designed and developed as a small commercial project.</h4>
