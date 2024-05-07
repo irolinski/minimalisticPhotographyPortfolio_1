@@ -25,8 +25,4 @@ This software uses the following open source packages:
 - Sass
 - Tailwind
 
-## License
-
-MIT
-
 ---
